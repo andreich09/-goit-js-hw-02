@@ -19,7 +19,7 @@ while (true) {
 }
 if (numbers.length > 0) {
     for (const number of numbers) {
-        total += Number(number);
+        total += number;
     }
     console.log(`Общая сумма чисел равна ${total}`);
 }

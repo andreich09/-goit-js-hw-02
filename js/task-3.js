@@ -1,16 +1,17 @@
 const findLongestWord = function(string) {
     // твой код
     let word = string.split(' ');
-    let wordLength = 0;
+    let maxWord = 0;
     let longestWord;
 
-    for (let i = 0; i < word.length; i += 1) {
-        wordLength = word[1].length;
-        if (word[i].length > wordLength) {
-            longestWord = word[i];
-            return longestWord;
+    for (const wordLength of word) {
+        const maxLength = wordLength.length;
+        if (maxWord < maxLength) {
+            maxWord = maxLength;
+            longestWord = wordLength;
         }
     }
+    return longestWord;
 };
 
 /*
